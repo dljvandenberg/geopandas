@@ -1,1 +1,8 @@
+numpy
+pandas
+shapely
+fiona
+six
+pyproj
+descartes
 geopandas
