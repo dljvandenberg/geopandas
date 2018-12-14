@@ -1,12 +1,14 @@
 FROM jupyter/datascience-notebook
 
+USER root
+
 RUN apt-get update && \
 	apt-get install -y binutils libproj-dev gdal-bin
 
-RUN mkdir -p /opt/geopandas/
+USER $NB_UID
 
-COPY requirements.txt /opt/geopandas/requirements.txt
+COPY requirements.txt /tmp/requirements.txt
 
 RUN pip install --upgrade pip
 
-RUN pip install -r /opt/geopandas/requirements.txt
+RUN pip install -r /tmp/requirements.txt
