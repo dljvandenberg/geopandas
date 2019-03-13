@@ -14,3 +14,6 @@ RUN pip install --upgrade pip
 RUN pip install -r /tmp/requirements.txt
 
 RUN jupyter contrib nbextension install --user
+
+RUN jupyter-nbextension install rise --py --sys-prefix && \
+        jupyter-nbextension enable rise --py --sys-prefix

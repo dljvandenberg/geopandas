@@ -9,3 +9,4 @@ descartes
 geopandas
 pysal
 mplleaflet
+RISE
