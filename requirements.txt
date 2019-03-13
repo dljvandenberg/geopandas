@@ -7,3 +7,5 @@ six
 pyproj
 descartes
 geopandas
+pysal
+mplleaflet
